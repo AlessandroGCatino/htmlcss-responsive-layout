@@ -1,15 +1,106 @@
+/* reset generici */
 *{
 margin: 0;
 padding: 0;
 box-sizing: border-box;
 }
 
-@media screen and (min-width:480px) {
+html {
+    scroll-behavior: smooth;
+  }
+
+li{
+    list-style-type: none;
+}
+img{
+    display: block;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ANCHOR classi generiche */
+
+.container{
+    padding-inline: 15%;
+}
+
+
+/* ANCHOR header */
+header{
+    background-color: #0084fd;
+}
+
+header div{
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul{
+    display: flex;
+    gap: 1em;
+    color: white;
+}
+
+/* main */
+
+main>div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100vw;
+}
+  
+section:nth-child(even) {
+  background-color: #9792e4;
+}
+
+/* ANCHOR intro */
+
+#intro{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding-block: 2em;
+}
+
+#intro .card{
+    width: calc((100%/3) - 10px);
+    display: flex;
+    padding: 15px;
+    background-color: #b5ddff;
+}
+
+#intro .large.card {
+    padding-bottom: 0;
+    flex-basis: 66%;
+}
+
+.large img{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+/* ANCHOR tablet */
+@media screen and (max-width:768px) {
+    body{background-color: red;}
+}
+
+/* ANCHOR mobile */
+@media screen and (max-width:480px) {
     body{
         background-color: green;
     }
-}
-
-@media screen and (min-width:768px) {
-    body{background-color: red;}
 }
