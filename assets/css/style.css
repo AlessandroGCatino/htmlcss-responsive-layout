@@ -7,6 +7,7 @@ box-sizing: border-box;
 
 html {
     scroll-behavior: smooth;
+    font-family: 'PT Sans', sans-serif;
   }
 
 li{
@@ -24,9 +25,15 @@ a{
 /* ANCHOR classi generiche */
 
 .container{
-    padding-inline: 15%;
+    padding-inline: 22%;
 }
 
+.link-button{
+    padding: 10px 20%;
+    border-radius: 25px;
+    border: none;
+    color: white;
+}
 
 /* ANCHOR header */
 header{
@@ -52,7 +59,6 @@ main>div{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 100vw;
 }
   
 section:nth-child(even) {
@@ -63,27 +69,58 @@ section:nth-child(even) {
 
 #intro{
     display: flex;
-    gap: 10px;
+    gap: 15px;
     flex-wrap: wrap;
     padding-block: 2em;
+    line-height: 160%;
 }
 
 #intro .card{
-    width: calc((100%/3) - 10px);
+    width: calc((100%/3) - 15px);
     display: flex;
     padding: 15px;
     background-color: #b5ddff;
+    color: #647a8d;
+    border-radius: 15px;
+
 }
 
-#intro .large.card {
+#intro .small.card{
+    aspect-ratio: 1;
+}
+
+#intro .large.card{
     padding-bottom: 0;
-    flex-basis: 66%;
+    flex-basis: calc(((100%/3)*2) - 15px);
+    aspect-ratio: 2 / 1;
+}
+
+.large.card div{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding-bottom: 5%;
+}
+
+.large.card button{
+    background-color: #0084fd;
+    font-weight: bold;
+}
+
+.large.card figure{
+    align-self:flex-end;
+    width: 50%;
+}
+
+.large.card h2{
+    color:#0084fd;
 }
 
 .large img{
-    width: 100%;
+    width: 80%;
 }
-
 
 
 
