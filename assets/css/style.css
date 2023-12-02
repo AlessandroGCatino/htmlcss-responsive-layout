@@ -49,6 +49,10 @@ a{
     color: white;
 }
 
+.purple{
+    background-color: var(--basecolor);
+}
+
 /* ANCHOR header */
 header{
     background-color: #0084fd;
@@ -80,6 +84,9 @@ main>div{
     flex-direction: column;
     gap: 10px;
 }
+section{
+    padding-block: 50px;
+}
   
 section:nth-child(even) {
   background-color: var(--basecolor);
@@ -91,8 +98,6 @@ section:nth-child(even) {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
-    padding-block: 2em;
-
     justify-content: center;
 }
 
@@ -221,7 +226,6 @@ section:nth-child(even) {
 #testimonials{
     display: flex;
     flex-direction: column;
-    padding-block: 20px;
     gap: 30px;
     text-align: center;
     align-items: center;
@@ -288,8 +292,48 @@ section:nth-child(even) {
     font-weight: bold;
 }
 
+/* ANCHOR features */
 
+#features{
+    text-align: center;
+}
 
+#features h1{
+    color: white;
+    padding-bottom: 50px;
+}
+
+#features>div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: left;
+}
+
+.benefits{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: white;
+    border-radius: 30px;
+    gap:20px;
+    width: calc((100%/3) - 20px);
+    padding: 30px;
+}
+
+.benefits p{
+    color: #647a8d;
+}
+
+.benefits span{
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.benefits span,
+.benefits h2{
+    color: var(--basecolor);
+}
 
 
 
@@ -360,6 +404,16 @@ section:nth-child(even) {
         justify-content: center;
         gap: 20px;
     }
+
+    .benefits{
+        width: calc((100%/2) - 20px);
+        padding: 30px;
+    }
+
+    #features>div{
+        text-align: left;
+        justify-content: center;
+    }
 }
 
 /* ANCHOR mobile */
@@ -413,5 +467,9 @@ section:nth-child(even) {
     }
     #testimonials .test-card figure{
         width: 70%;
+    }
+
+    .benefits{
+        width: 100%;
     }
 }
