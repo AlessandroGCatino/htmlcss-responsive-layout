@@ -53,6 +53,12 @@ header ul{
     color: white;
 }
 
+header nav div{
+    font-size: 40px;
+    color: white;
+    display: none;
+}
+
 /* main */
 
 main>div{
@@ -154,6 +160,18 @@ section:nth-child(even) {
         padding-inline: 10px;
     }
 
+    header div figure{
+        padding-inline: 1em;
+    }
+
+    header nav div{
+        display: inline-block;
+    }
+
+    header nav ul{
+        display: none;
+    }
+
     .large.card{
         flex-direction: column;
     }
@@ -172,6 +190,14 @@ section:nth-child(even) {
     .container{
         padding-inline: 40px;
     }
+
+    header ul{
+        display: none;
+        gap: 1em;
+        color: white;
+    }
+
+
     
     #intro .card{
         width: 100%;
