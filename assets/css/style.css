@@ -6,12 +6,20 @@ padding: 0;
 box-sizing: border-box;
 }
 
+:root{
+    --basecolor: #9792e4;
+}
+
 html {
     scroll-behavior: smooth;
     font-family: 'PT Sans', sans-serif;
 }
 
 h1{
+    font-size: 50px;
+}
+
+h2{
     font-size: 30px;
 }
 
@@ -74,7 +82,7 @@ main>div{
 }
   
 section:nth-child(even) {
-  background-color: #9792e4;
+  background-color: var(--basecolor);
 }
 
 /* ANCHOR intro */
@@ -144,7 +152,7 @@ section:nth-child(even) {
     width: 50%;
 }
 
-.card h2{
+.card h3{
     color:#0084fd;
 }
 
@@ -201,19 +209,102 @@ section:nth-child(even) {
 }
 
 .right-plan div button{
-    background-color: #9792e4;
+    background-color: var(--basecolor);
     padding: 15px 18px;
     line-height: 100%;
     border-radius: 50%;
     border: none;
-
 }
+
+/* ANCHOR testimonials */
+
+#testimonials{
+    display: flex;
+    flex-direction: column;
+    padding-block: 20px;
+    gap: 30px;
+    text-align: center;
+    align-items: center;
+}
+
+#testimonials>span{
+    text-transform: uppercase;
+}
+
+#testimonials>h1{
+    color: var(--basecolor);
+}
+#testimonials>p{
+    font-size: 20px;
+}
+
+.test-card{
+    display: flex;
+    padding: 30px 20px;
+    border-radius: 30px;
+    gap: 40px;
+    background-color: var(--basecolor);
+    color: white;
+}
+
+#testimonials .test-card figure{
+    width: 20%;
+    aspect-ratio: 1/1;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+#testimonials :first-of-type.test-card figure{
+    background-image: url(../img/testimonial1.jpg);
+}
+
+#testimonials :nth-of-type(2).test-card figure{
+    background-image: url(../img/testimonial2.jpg);
+}
+
+#testimonials :last-of-type.test-card figure{
+    background-image: url(../img/testimonial3.jpg);
+}
+
+.test-card div{
+    width: 70%;
+    font-size: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.test-card div p :first-child{
+    vertical-align: super;
+}
+.test-card div p :last-child{
+    vertical-align: sub;
+}
+
+.test-card div span{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+
+
 
 
 /* ANCHOR tablet */
 @media screen and (max-width:768px) {
     .container{
         padding-inline: 10px;
+    }
+
+    h1{
+        font-size: 40px;
+    }
+    
+    h2{
+        font-size: 25px;
     }
 
     header div figure{
@@ -259,6 +350,16 @@ section:nth-child(even) {
         width: 90%;
         align-self: initial;
     }
+
+    .test-card div{
+        width: 70%;
+        font-size: 100%;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
 }
 
 /* ANCHOR mobile */
@@ -272,8 +373,6 @@ section:nth-child(even) {
         gap: 1em;
         color: white;
     }
-
-
     
     #intro .card{
         width: 100%;
@@ -298,5 +397,21 @@ section:nth-child(even) {
 
     #intro .large.card figure img{
         width: 100%;   
+    }
+
+    .test-card{
+        padding: 30px 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .test-card div{
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    #testimonials .test-card figure{
+        width: 70%;
     }
 }
