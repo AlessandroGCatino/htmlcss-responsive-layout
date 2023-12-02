@@ -51,6 +51,7 @@ a{
 
 .purple{
     background-color: var(--basecolor);
+    color: white;
 }
 
 /* ANCHOR header */
@@ -336,6 +337,59 @@ section:nth-child(even) {
 }
 
 
+/* ANCHOR about-us */
+
+#about-us{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 25%;
+}
+
+.company{
+    width: 70%;
+}
+
+.company h1,
+.personal{
+    color: var(--basecolor);
+}
+
+.company p{
+    line-height: 300%;
+}
+
+.company p:first-of-type{
+    margin-block: 40px;
+}
+
+
+.personal{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:20px;
+}
+
+.personal figure{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 80px;
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-image: url(../img/about.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.personal .link-button{
+    padding: 10px;
+}
+.personal .link-button i{
+    margin-right: 5px;
+}
+
 
 /* ANCHOR tablet */
 @media screen and (max-width:768px) {
@@ -414,6 +468,33 @@ section:nth-child(even) {
         text-align: left;
         justify-content: center;
     }
+
+    #about-us{
+        padding-inline: 10%;
+    }
+
+    .company{
+        width: 60%;
+    }
+
+    .company p{
+        line-height: 200%;
+    }
+
+    .personal{
+        width: 35%;
+    }
+
+    .personal figure{
+        font-size: 40px;
+        width: 100%;
+        aspect-ratio: 1/1;
+        background-image: url(../img/about.jpg);
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+    }
+
 }
 
 /* ANCHOR mobile */
@@ -471,5 +552,21 @@ section:nth-child(even) {
 
     .benefits{
         width: 100%;
+    }
+
+    #about-us{
+        flex-wrap: wrap;
+        row-gap: 30px;
+    }
+
+    .company{
+        width: 100%;
+    }
+    .personal{
+        width: 100%;
+    }
+
+    .personal figure{
+        width: 50%;
     }
 }
