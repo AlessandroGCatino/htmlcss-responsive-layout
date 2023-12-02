@@ -73,6 +73,7 @@ section:nth-child(even) {
     flex-wrap: wrap;
     padding-block: 2em;
     line-height: 160%;
+    justify-content: center;
 }
 
 #intro .card{
@@ -82,16 +83,31 @@ section:nth-child(even) {
     background-color: #b5ddff;
     color: #647a8d;
     border-radius: 15px;
+    font-size: 16px;
+    font-weight: bold;
 
 }
 
 #intro .small.card{
     aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+
 }
+
+#intro .small.card figure{
+    fill: #0084fd;  
+    width: 20%;
+}
+
 
 #intro .large.card{
     padding-bottom: 0;
-    flex-basis: calc(((100%/3)*2) - 15px);
+    width: calc(((100%/3)*2) - 15px);
     aspect-ratio: 2 / 1;
 }
 
@@ -106,15 +122,17 @@ section:nth-child(even) {
 
 .large.card button{
     background-color: #0084fd;
+    font-size: 16px;
     font-weight: bold;
 }
+
 
 .large.card figure{
     align-self:flex-end;
     width: 50%;
 }
 
-.large.card h2{
+.card h2{
     color:#0084fd;
 }
 
@@ -132,12 +150,51 @@ section:nth-child(even) {
 
 /* ANCHOR tablet */
 @media screen and (max-width:768px) {
-    body{background-color: red;}
+    .container{
+        padding-inline: 10px;
+    }
+
+    .large.card{
+        flex-direction: column;
+    }
+    .large.card figure{
+        align-self:flex-start;
+        width: 50%;
+    }
+    .large.card div{
+        width: 100%;
+        gap: 20px;
+    }
 }
 
 /* ANCHOR mobile */
 @media screen and (max-width:480px) {
-    body{
-        background-color: green;
+    .container{
+        padding-inline: 40px;
+    }
+    
+    #intro .card{
+        width: 100%;
+        padding-inline: 30px;   
+    }
+
+    #intro .small.card figure{
+        width: 30%;
+    }
+    #intro .large.card{
+        width: 100%;
+        align-items: center;
+        
+    }
+    #intro .large.card div{
+        width: 100%;
+        align-items: center;
+    }
+    #intro .large.card figure{
+        width: 100%;   
+    }
+
+    #intro .large.card figure img{
+        width: 100%;   
     }
 }
