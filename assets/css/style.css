@@ -1,5 +1,6 @@
 /* reset generici */
 *{
+line-height: 160%;
 margin: 0;
 padding: 0;
 box-sizing: border-box;
@@ -8,13 +9,18 @@ box-sizing: border-box;
 html {
     scroll-behavior: smooth;
     font-family: 'PT Sans', sans-serif;
-  }
+}
+
+h1{
+    font-size: 30px;
+}
 
 li{
     list-style-type: none;
 }
 img{
     display: block;
+    width: 100%;
 }
 a{
     text-decoration: none;
@@ -78,7 +84,7 @@ section:nth-child(even) {
     gap: 15px;
     flex-wrap: wrap;
     padding-block: 2em;
-    line-height: 160%;
+
     justify-content: center;
 }
 
@@ -147,11 +153,61 @@ section:nth-child(even) {
 }
 
 
+/* ANCHOR planning */
 
+#planning{
+    display: flex;
+    padding: 5% 25%;
+    gap: 40px;
+}
 
+.left-plan{
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+    width: 50%;
+    padding: 20px;
+    color: white;
+}
+.right-plan{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: white;
+    align-self: flex-end;
+    border-radius: 50px;
+}
 
+.right-plan div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    padding-block: 40px;
+    gap: 20px;
+    text-align: center;
+}
 
+.right-plan div p{
+    font-style: italic;
+}
 
+.right-plan div figure{
+    width: 60%;
+}
+
+.right-plan div button{
+    background-color: #9792e4;
+    padding: 15px 18px;
+    line-height: 100%;
+    border-radius: 50%;
+    border: none;
+
+}
 
 
 /* ANCHOR tablet */
@@ -182,6 +238,26 @@ section:nth-child(even) {
     .large.card div{
         width: 100%;
         gap: 20px;
+    }
+
+    #planning{
+        display: flex;
+        padding: 30px 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .right-plan div figure{
+        width: 100%;
+    }
+
+    .left-plan{
+        flex-direction: column;
+        width: 90%;
+    }
+    .right-plan{
+        width: 90%;
+        align-self: initial;
     }
 }
 
